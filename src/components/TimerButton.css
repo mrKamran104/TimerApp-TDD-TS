@@ -1,0 +1,13 @@
+button {
+  outline: none;
+  background: transparent;
+  border: 1px solid blue;
+  padding: 5px 10px;
+  border-radius: 7px;
+  color: blue;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(79, 148, 226, 0.829);
+}
