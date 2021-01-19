@@ -3,10 +3,10 @@ import "./TimerStyle.css";
 import TimerButton from "./TimerButton";
 
 const Timer = () => {
-  const [timer, setTimer] = useState(0);
-  const [isActive, setIsActive] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-  let increment: any = useRef(null);
+  const [timer, setTimer] = useState<number>(0);
+  const [isActive, setIsActive] = useState<boolean>(false);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+  let increment = useRef<any>(null);
 
   const handleStart = () => {
     setIsActive(true);
@@ -35,7 +35,7 @@ const Timer = () => {
     setTimer(0);
   };
 
-  const formatTime = () => {
+  const formatTime = (): string => {
     const getMiliSeconds: string = `0${timer}`.slice(-2);
     const seconds: number = Math.floor(timer / 100);
     const getSeconds: string = `0${seconds % 60}`.slice(-2);
